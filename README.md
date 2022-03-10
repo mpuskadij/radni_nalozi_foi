@@ -13,7 +13,7 @@ A sada, vrijeme je da malo izmijenite ovaj dokument. Za upis/opis vašeg program
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Marin Puškadija | mpuskadij20@foi.hr | 000000000 | mpuskadij
+Marin Puškadija | mpuskadij20@foi.hr | 0016149444 | mpuskadij
 
 
 ## Opis domene
