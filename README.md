@@ -10,7 +10,6 @@ A sada, vrijeme je da malo izmijenite ovaj dokument. Za upis/opis vašeg program
 # Mikrobiološki laboratorij
 
 ## Podaci o studentu
-(ispod promijenite samo drugi redak tablice)
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
