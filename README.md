@@ -14,14 +14,15 @@ Zadaća se bavi specifikacijom zahtjeva, dizajniranjem softverskog rješenja i i
 
 
 ## Specifikacija projekta
-Umjesto ovih uputa vlastitim riječima opišite zahtjeve za funkcionalnošću programskog proizvoda.
 
-Zahtjevi funkcionalosti softverskog rješenja:
+Zahtjevi funkcionalnosti softverskog rješenja:
 - unos, pregled radnih naloga i uzoraka
 - pretraživanje radnih naloga
 - djelomično automatizirano upisivanje rezultata pomoću QR koda
 - automatsko otvaranje radnih naloga skeniranjem QR kod
+- ručno otvaranje radnih naloga
 - pregled pacijenata i pretraga
+- izvještaj o povijesti pretraga
 
 ## Zadatak
 https://github.com/foivz/pi22-zadace-mpuskadij/blob/master/Korisni%C4%8Dki%20zahtjevi%20ZS%20-%20mikrobiolo%C5%A1ki%20laboratorij.pdf
