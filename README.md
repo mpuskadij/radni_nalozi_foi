@@ -8,7 +8,6 @@ Marin Puškadija | mpuskadij20@foi.hr | 0016149444 | mpuskadij
 
 
 ## Opis domene
-Umjesto ovih uputa vlastitim riječima opišite domenu ili problem koji pokriva projekt za vaše zadaće.
 
 Zadaća se bavi specifikacijom zahtjeva, dizajniranjem softverskog rješenja i implementacija navedenog softverskog rješenja za mikrobiološki laboratorij. Laboratorij želi pomoćni računalni sustav koji bi digitalizirao trenutni papirnati radni nalog, imao bazu svih radnih naloga, strojevi bi djelomično automatski upisivali rezultate u aktivne radne naloge. 
 
