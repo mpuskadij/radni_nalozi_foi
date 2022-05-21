@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Software",
+    "\\Software\\Lab Workflow Manager",
+    "\\Software\\Lab Workflow Manager\\Models",
+    "\\Software\\Lab Workflow Manager\\Properties",
+    "\\Software\\Lab Workflow Manager\\Repositories"
   ],
   "PreviewInSolutionExplorer": false
 }

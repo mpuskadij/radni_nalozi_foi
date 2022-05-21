@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_Workflow_Manager.Models
 {
-    public class Employee : Person
+    public class SearchType : Type
     {
-       public Role Role { get; set; }
-
-       
     }
 }
