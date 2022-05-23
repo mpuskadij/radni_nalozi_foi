@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Lab_Workflow_Manager.Models;
+using Lab_Workflow_Manager.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,14 @@ namespace Lab_Workflow_Manager
         public FrmAddWorkOrder()
         {
             InitializeComponent();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            WorkOrder currentWorkOrder = null;
+            currentWorkOrder.SearchType = cboTypeOfWorkSearch.SelectedItem as SearchType;
+            currentWorkOrder.InsertCurrentDate();
+            currentWorkOrder.Status.GetStatus();
         }
     }
 }

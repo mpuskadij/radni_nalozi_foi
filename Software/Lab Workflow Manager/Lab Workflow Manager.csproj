@@ -56,7 +56,14 @@
     <Compile Include="FrmAddWorkOrder.Designer.cs">
       <DependentUpon>FrmAddWorkOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmWorkOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWorkOrders.Designer.cs">
+      <DependentUpon>FrmWorkOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\SearchType.cs" />
+    <Compile Include="Models\Status.cs" />
     <Compile Include="Models\WorkOrder.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Patient.cs" />

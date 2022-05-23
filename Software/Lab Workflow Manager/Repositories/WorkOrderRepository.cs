@@ -40,22 +40,45 @@ namespace Lab_Workflow_Manager.Repositories
             SearchType searchType = (SearchType)reader["SearchType"];
             Employee employee = (Employee)reader["Employee"];
             Sample sample = (Sample)reader["Sample"];
+            Status status = (Status)reader["Status"];
             var workorder = new WorkOrder
             {
                 Id = id,
                 Date = date,
                 SearchType = searchType,
                 Employee = employee,
-                Sample = sample
+                Sample = sample,
+                Status = status
             };
             return workorder;
 
 
         }
 
-        public bool CheckId()
+        public bool CheckId(long id)
         {
+            List<WorkOrder> workOrders = GetWorkOrders();
 
+            foreach (WorkOrder workOrder in workOrders)
+            {
+                if (workOrder.Id == id)
+                    return false;
+            }
+            return true;
+        }
+
+        public bool CheckSample(long Id)
+        {
+            List<WorkOrder> workOrders = GetWorkOrders();
+            
+            foreach(WorkOrder workOrder in workOrders)
+            {
+                if (workOrder.Sample.Id == Id)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

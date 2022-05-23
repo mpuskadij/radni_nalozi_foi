@@ -17,6 +17,13 @@ namespace Lab_Workflow_Manager.Models
 
         public Sample Sample { get; set; }
 
+        public Status Status { get; set; }
+
+        public string InsertCurrentDate()
+        {
+            return DateTime.Now.ToString("dd-MM-yyyy");
+        }
+
 
 
     }
