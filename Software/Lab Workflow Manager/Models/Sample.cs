@@ -8,11 +8,13 @@ namespace Lab_Workflow_Manager.Models
 {
     public class Sample
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         public Patient Patient { get; set; }
 
         public SampleType SampleType { get; set; }
+
+        public string Amount { get; set; }
 
 
     }

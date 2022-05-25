@@ -8,13 +8,11 @@ namespace Lab_Workflow_Manager.Models
 {
     public class Status  : Type
     {
-        public Status GetStatus()
+        public void InsertStatus()
         {
-            Status status = null;
-            status.Id = 1;
-            status.Name = "Otvoren";
-
-            return status;
+            this.Id = 0;
+            this.Name = "Otvoren";
+            return;
         }
     }
 }

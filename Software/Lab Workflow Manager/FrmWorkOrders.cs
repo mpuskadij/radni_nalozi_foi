@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Lab_Workflow_Manager.Models;
+using Lab_Workflow_Manager.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,17 @@ namespace Lab_Workflow_Manager
         public FrmWorkOrders()
         {
             InitializeComponent();
+        }
+
+        private void FrmWorkOrders_Load(object sender, EventArgs e)
+        {
+            ShowWorkOrders();
+        }
+
+        private void ShowWorkOrders()
+        {
+            List<WorkOrder> workOrders = WorkOrderRepository.GetWorkOrders();
+            dgvWorkOrders.DataSource = workOrders;
         }
     }
 }

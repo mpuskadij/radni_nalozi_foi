@@ -35,20 +35,20 @@ namespace Lab_Workflow_Manager.Repositories
 
         private static WorkOrder CreateObject(System.Data.SqlClient.SqlDataReader reader)
         {
-            long id = long.Parse(reader["Id"].ToString());
-            DateTime date = (DateTime)reader["DateTime"];
-            SearchType searchType = (SearchType)reader["SearchType"];
-            Employee employee = (Employee)reader["Employee"];
-            Sample sample = (Sample)reader["Sample"];
-            Status status = (Status)reader["Status"];
+            int id = int.Parse(reader["Id"].ToString());
+            string date = reader["Date"].ToString();
+            int searchType = int.Parse(reader["SearchTypeId"].ToString());
+            int employee = int.Parse(reader["EmployeeId"].ToString());
+            int sample = int.Parse(reader["SampleId"].ToString());
+            int status = int.Parse(reader["StatusId"].ToString());
             var workorder = new WorkOrder
             {
                 Id = id,
                 Date = date,
-                SearchType = searchType,
-                Employee = employee,
-                Sample = sample,
-                Status = status
+                SearchType = SearchTypeRepository.GetSearchType(searchType),
+                Employee = EmployeeRepository.GetEmployee(employee),
+                Sample = SampleRepository.GetSample(sample),
+                Status = StatusRepository.GetStatus(status)
             };
             return workorder;
 

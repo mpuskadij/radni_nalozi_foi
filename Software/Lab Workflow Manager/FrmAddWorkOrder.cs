@@ -21,10 +21,12 @@ namespace Lab_Workflow_Manager
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            
             WorkOrder currentWorkOrder = null;
+            currentWorkOrder.Id = int.Parse(txtId.Text);
             currentWorkOrder.SearchType = cboTypeOfWorkSearch.SelectedItem as SearchType;
             currentWorkOrder.InsertCurrentDate();
-            currentWorkOrder.Status.GetStatus();
+            currentWorkOrder.Status.InsertStatus();
         }
     }
 }
