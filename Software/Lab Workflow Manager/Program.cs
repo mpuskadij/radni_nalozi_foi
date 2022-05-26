@@ -16,7 +16,7 @@ namespace Lab_Workflow_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAddWorkOrder());
+            Application.Run(new FrmWorkOrders());
         }
     }
 }

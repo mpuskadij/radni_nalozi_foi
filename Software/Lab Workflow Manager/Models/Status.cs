@@ -11,8 +11,13 @@ namespace Lab_Workflow_Manager.Models
         public void InsertStatus()
         {
             this.Id = 0;
-            this.Name = "Otvoren";
+            this.Name = "U radu";
             return;
+        }
+
+        public override string ToString()
+        {
+            return this.Name;
         }
     }
 }

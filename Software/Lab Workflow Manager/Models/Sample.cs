@@ -17,5 +17,10 @@ namespace Lab_Workflow_Manager.Models
         public string Amount { get; set; }
 
 
+        public override string ToString()
+        {
+            return this.Id.ToString();
+        }
+
     }
 }

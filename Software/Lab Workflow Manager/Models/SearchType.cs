@@ -8,5 +8,10 @@ namespace Lab_Workflow_Manager.Models
 {
     public class SearchType : Type
     {
+
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 }

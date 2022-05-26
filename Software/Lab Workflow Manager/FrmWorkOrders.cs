@@ -1,4 +1,5 @@
-﻿using Lab_Workflow_Manager.Models;
+﻿using DBLayer;
+using Lab_Workflow_Manager.Models;
 using Lab_Workflow_Manager.Repositories;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace Lab_Workflow_Manager
 {
     public partial class FrmWorkOrders : Form
     {
+        
         public FrmWorkOrders()
         {
             InitializeComponent();
@@ -26,8 +28,35 @@ namespace Lab_Workflow_Manager
 
         private void ShowWorkOrders()
         {
+            DB.SetConfiguration("mpuskadij20_DB", "mpuskadij20", "o@Rx0B7f");
             List<WorkOrder> workOrders = WorkOrderRepository.GetWorkOrders();
+            foreach (WorkOrder workOrder in workOrders)
+            {
+                workOrder.Status.ToString();
+                workOrder.Sample.ToString();
+                workOrder.SearchType.ToString();
+                workOrder.Employee.ToString();
+            }
             dgvWorkOrders.DataSource = workOrders;
+            
+            
+        }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            WorkOrder selectedWorkOrder = dgvWorkOrders.CurrentRow.DataBoundItem as WorkOrder;
+            if (selectedWorkOrder != null)
+            {
+                FrmAddWorkOrder frmAddWorkOrder = new FrmAddWorkOrder(selectedWorkOrder);
+                frmAddWorkOrder.ShowDialog();
+                
+
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            FrmAddWorkOrder frmAddWorkOrder = new FrmAddWorkOrder();
         }
     }
 }

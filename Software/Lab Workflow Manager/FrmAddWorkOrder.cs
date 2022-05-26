@@ -14,6 +14,14 @@ namespace Lab_Workflow_Manager
 {
     public partial class FrmAddWorkOrder : Form
     {
+        private WorkOrder workOrder;
+
+        public FrmAddWorkOrder(WorkOrder selectedWorkOrder)
+        {
+            InitializeComponent();
+            workOrder = selectedWorkOrder;
+        }
+
         public FrmAddWorkOrder()
         {
             InitializeComponent();
@@ -25,8 +33,13 @@ namespace Lab_Workflow_Manager
             WorkOrder currentWorkOrder = null;
             currentWorkOrder.Id = int.Parse(txtId.Text);
             currentWorkOrder.SearchType = cboTypeOfWorkSearch.SelectedItem as SearchType;
-            currentWorkOrder.InsertCurrentDate();
+            if (currentWorkOrder.Date == null) currentWorkOrder.InsertCurrentDate();
             currentWorkOrder.Status.InsertStatus();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -44,7 +44,7 @@ namespace Lab_Workflow_Manager.Repositories
             var workorder = new WorkOrder
             {
                 Id = id,
-                Date = date,
+                Date = DateTime.Parse(date),
                 SearchType = SearchTypeRepository.GetSearchType(searchType),
                 Employee = EmployeeRepository.GetEmployee(employee),
                 Sample = SampleRepository.GetSample(sample),

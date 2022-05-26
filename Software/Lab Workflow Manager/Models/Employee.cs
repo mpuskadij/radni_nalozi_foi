@@ -9,7 +9,10 @@ namespace Lab_Workflow_Manager.Models
     public class Employee : Person
     {
        public Role Role { get; set; }
+       public override string ToString()
+       {
+           return this.Name;
+       }
 
-       
     }
 }

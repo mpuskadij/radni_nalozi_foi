@@ -8,7 +8,7 @@ namespace Lab_Workflow_Manager.Models
 {
     public abstract class Person
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public string Contact { get; set; }
