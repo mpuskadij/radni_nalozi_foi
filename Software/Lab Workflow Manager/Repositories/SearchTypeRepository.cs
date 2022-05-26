@@ -41,5 +41,27 @@ namespace Lab_Workflow_Manager.Repositories
 
             return searchType;
         }
+
+        public static List<SearchType> GetSearchTypes()
+        {
+            List<SearchType> searchTypes= new List<SearchType>();
+
+            string sql = "SELECT * FROM SearchTypes";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+
+            SearchType searchType = null;
+
+            while (reader.Read())
+            {
+                searchType = CreateObject(reader);
+                searchTypes.Add(searchType);
+            }
+            reader.Close();
+            DB.CloseConnection();
+
+            return searchTypes;
+
+        }
     }
 }

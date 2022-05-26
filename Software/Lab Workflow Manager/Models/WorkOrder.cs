@@ -21,7 +21,7 @@ namespace Lab_Workflow_Manager.Models
 
         public string InsertCurrentDate()
         {
-            return DateTime.Now.ToString("dd-MM-yyyy");
+            return DateTime.Now.ToString("dd.M.yyyy H:m");
         }
 
 

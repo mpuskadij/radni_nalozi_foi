@@ -35,6 +35,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.txtSampleId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -99,11 +100,19 @@
             this.txtId.Size = new System.Drawing.Size(135, 20);
             this.txtId.TabIndex = 6;
             // 
+            // txtSampleId
+            // 
+            this.txtSampleId.Location = new System.Drawing.Point(285, 95);
+            this.txtSampleId.Name = "txtSampleId";
+            this.txtSampleId.Size = new System.Drawing.Size(135, 20);
+            this.txtSampleId.TabIndex = 7;
+            // 
             // FrmAddWorkOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(574, 275);
+            this.Controls.Add(this.txtSampleId);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -113,6 +122,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAddWorkOrder";
             this.Text = "Dodaj/Promijeni radni nalog";
+            this.Load += new System.EventHandler(this.FrmAddWorkOrder_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,6 +137,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtSampleId;
     }
 }
 

@@ -41,5 +41,22 @@ namespace Lab_Workflow_Manager
         {
             Close();
         }
+
+        private void FrmAddWorkOrder_Load(object sender, EventArgs e)
+        {
+            if(workOrder != null)
+            {
+                txtId.Text = workOrder.Id.ToString();
+                txtSampleId.Text = workOrder.Sample.Id.ToString();
+                SetFormText();
+            }
+            var searchTypes = SearchTypeRepository.GetSearchTypes();
+            cboTypeOfWorkSearch.DataSource = searchTypes;
+        }
+
+        private void SetFormText()
+        {
+            Text = workOrder.Status.ToString();
+        }
     }
 }
