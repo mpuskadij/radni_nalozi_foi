@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab_Workflow_Manager.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,9 @@ namespace Lab_Workflow_Manager.Models
             return DateTime.Now.ToString("dd.M.yyyy H:m");
         }
 
-
-
+        public void PerformSQL()
+        {
+            var workOrder = WorkOrderRepository.GetWorkOrders();
+        }
     }
 }

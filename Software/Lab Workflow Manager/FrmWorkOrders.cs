@@ -58,5 +58,11 @@ namespace Lab_Workflow_Manager
         {
             FrmAddWorkOrder frmAddWorkOrder = new FrmAddWorkOrder();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            WorkOrder workOrder = dgvWorkOrders.CurrentRow.DataBoundItem as WorkOrder;
+
+        }
     }
 }

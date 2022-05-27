@@ -11,6 +11,8 @@ namespace Lab_Workflow_Manager.Repositories
     public class WorkOrderRepository
     {
 
+       
+
         public static List<WorkOrder> GetWorkOrders()
         {
             List<WorkOrder> workOrders = new List<WorkOrder>();
@@ -80,5 +82,30 @@ namespace Lab_Workflow_Manager.Repositories
             }
             return true;
         }
+
+        public static void DeleteWorkOrder(WorkOrder workOrder)
+        {
+            string sql = $"DELETE FROM WorkOrders WHERE Id = {workOrder.Id}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
+        public static void InsertWorkOrder(WorkOrder workOrder)
+        {
+            string sql = $"INSERT INTO WorkOrders (Id,Date,EmployeeId,StatusId,SearchTypeId,SampleId) VALUES({workOrder.Id},{workOrder.Date},{workOrder.Employee.Id},{workOrder.Status.Id},{workOrder.SearchType.Id},{workOrder.Sample.Id})";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
+        public static void UpdateWorkOrder(WorkOrder workOrder)
+        {
+            string sql = $"UPDATE WorkOrders SET Id = {workOrder.Id}, Date = {workOrder.Date}, EmployeeId = {workOrder.Employee.Id}, StatusId = {workOrder.Status.Id}, SearchTypeId = {workOrder.SearchType.Id}, SampleId = {workOrder.Sample.Id} WHERE Id = {workOrder.Id}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
     }
 }

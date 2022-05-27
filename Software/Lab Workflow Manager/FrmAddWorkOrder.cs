@@ -35,11 +35,14 @@ namespace Lab_Workflow_Manager
             currentWorkOrder.SearchType = cboTypeOfWorkSearch.SelectedItem as SearchType;
             if (currentWorkOrder.Date == null) currentWorkOrder.InsertCurrentDate();
             currentWorkOrder.Status.InsertStatus();
+
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+            
         }
 
         private void FrmAddWorkOrder_Load(object sender, EventArgs e)
