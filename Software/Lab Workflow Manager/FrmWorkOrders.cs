@@ -62,7 +62,17 @@ namespace Lab_Workflow_Manager
         private void btnDelete_Click(object sender, EventArgs e)
         {
             WorkOrder workOrder = dgvWorkOrders.CurrentRow.DataBoundItem as WorkOrder;
-
+            WorkOrderRepository.DeleteWorkOrder(workOrder);
         }
+
+        private void txtSearchById_TextChanged(object sender, EventArgs e)
+        {
+            List<WorkOrder> workOrders;
+            if (txtSearchById.Text == "") workOrders = WorkOrderRepository.GetWorkOrders();
+            else workOrders = WorkOrderRepository.GetWorkOrders(int.Parse(txtSearchById.Text));
+            dgvWorkOrders.DataSource = workOrders;
+        }
+
+
     }
 }

@@ -11,7 +11,26 @@ namespace Lab_Workflow_Manager.Repositories
     public class WorkOrderRepository
     {
 
-       
+        public static List<WorkOrder> GetWorkOrders(int id)
+        {
+            List<WorkOrder> workOrders = new List<WorkOrder>();
+
+            string sql = $"SELECT * FROM WorkOrders WHERE Id = {id}";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+
+            WorkOrder workOrder = null;
+
+            while (reader.Read())
+            {
+                workOrder = CreateObject(reader);
+                workOrders.Add(workOrder);
+            }
+            reader.Close();
+            DB.CloseConnection();
+
+            return workOrders;
+        }
 
         public static List<WorkOrder> GetWorkOrders()
         {

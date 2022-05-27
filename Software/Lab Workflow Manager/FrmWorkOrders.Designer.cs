@@ -32,20 +32,21 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnChange = new System.Windows.Forms.Button();
+            this.txtSearchById = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvWorkOrders
             // 
             this.dgvWorkOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWorkOrders.Location = new System.Drawing.Point(39, 31);
+            this.dgvWorkOrders.Location = new System.Drawing.Point(39, 72);
             this.dgvWorkOrders.Name = "dgvWorkOrders";
             this.dgvWorkOrders.Size = new System.Drawing.Size(711, 326);
             this.dgvWorkOrders.TabIndex = 0;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(39, 380);
+            this.btnDelete.Location = new System.Drawing.Point(39, 415);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(137, 52);
             this.btnDelete.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(613, 380);
+            this.btnAdd.Location = new System.Drawing.Point(613, 415);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(137, 52);
             this.btnAdd.TabIndex = 2;
@@ -65,7 +66,7 @@
             // 
             // btnChange
             // 
-            this.btnChange.Location = new System.Drawing.Point(335, 380);
+            this.btnChange.Location = new System.Drawing.Point(339, 415);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(137, 52);
             this.btnChange.TabIndex = 3;
@@ -73,11 +74,20 @@
             this.btnChange.UseVisualStyleBackColor = true;
             this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
+            // txtSearchById
+            // 
+            this.txtSearchById.Location = new System.Drawing.Point(39, 26);
+            this.txtSearchById.Name = "txtSearchById";
+            this.txtSearchById.Size = new System.Drawing.Size(158, 20);
+            this.txtSearchById.TabIndex = 4;
+            this.txtSearchById.TextChanged += new System.EventHandler(this.txtSearchById_TextChanged);
+            // 
             // FrmWorkOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 479);
+            this.Controls.Add(this.txtSearchById);
             this.Controls.Add(this.btnChange);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDelete);
@@ -87,6 +97,7 @@
             this.Load += new System.EventHandler(this.FrmWorkOrders_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkOrders)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -96,5 +107,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnChange;
+        private System.Windows.Forms.TextBox txtSearchById;
     }
 }
