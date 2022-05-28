@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab_Workflow_Manager.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,19 @@ namespace Lab_Workflow_Manager.Models
        {
            return this.Name;
        }
+
+       public void PerformAction(int id)
+        {
+            var workOrder = WorkOrderRepository.GetWorkOrder(id);
+            if (workOrder == null)
+            {
+                WorkOrderRepository.InsertWorkOrder(workOrder);
+            }
+            else
+            {
+                WorkOrderRepository.UpdateWorkOrder(workOrder);
+            }
+        }
 
     }
 }

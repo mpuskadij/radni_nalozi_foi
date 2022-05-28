@@ -10,7 +10,7 @@ namespace Lab_Workflow_Manager.Repositories
 {
     public class WorkOrderRepository
     {
-
+        //Ova metoda je za pronalazak svih naloga koji odgovaraju unesenom broju na formi
         public static List<WorkOrder> GetWorkOrders(int id)
         {
             List<WorkOrder> workOrders = new List<WorkOrder>();
@@ -32,6 +32,28 @@ namespace Lab_Workflow_Manager.Repositories
             return workOrders;
         }
 
+        //Pronađi 1 nalog i vrati ga
+        public static WorkOrder GetWorkOrder(int id)
+        {
+
+            string sql = $"SELECT * FROM WorkOrders WHERE Id = {id}";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+
+            WorkOrder workOrder = null;
+
+            if (reader.HasRows)
+            {
+                reader.Read();
+                workOrder = CreateObject(reader);
+                reader.Close();
+            }
+            DB.CloseConnection();
+
+            return workOrder;
+        }
+
+        //Dohvati sve naloge
         public static List<WorkOrder> GetWorkOrders()
         {
             List<WorkOrder> workOrders = new List<WorkOrder>();
