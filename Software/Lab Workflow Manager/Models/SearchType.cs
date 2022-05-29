@@ -13,5 +13,6 @@ namespace Lab_Workflow_Manager.Models
         {
             return this.Name;
         }
+
     }
 }

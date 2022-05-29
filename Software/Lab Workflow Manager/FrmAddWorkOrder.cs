@@ -29,13 +29,23 @@ namespace Lab_Workflow_Manager
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
-            WorkOrder currentWorkOrder = null;
-            currentWorkOrder.Id = int.Parse(txtId.Text);
-            currentWorkOrder.SearchType = cboTypeOfWorkSearch.SelectedItem as SearchType;
-            if (currentWorkOrder.Date == null) currentWorkOrder.InsertCurrentDate();
-            currentWorkOrder.Status.InsertStatus();
 
+            WorkOrder currentWorkOrder = new WorkOrder();
+            currentWorkOrder.Sample = new Sample();
+            currentWorkOrder.Employee = new Employee();
+            currentWorkOrder.SearchType = new SearchType();
+            currentWorkOrder.Status = new Status();
+
+            currentWorkOrder.Id = int.Parse(txtId.Text);
+            currentWorkOrder.Sample.Id = int.Parse(txtSampleId.Text);
+            currentWorkOrder.SearchType.Id = int.Parse(cboTypeOfWorkSearch.SelectedValue.ToString());
+            currentWorkOrder.Employee.Id = 1;
+            if (currentWorkOrder.Status == null)currentWorkOrder.Status.InsertStatus();
+
+            Employee.PerformAction(currentWorkOrder);
+
+
+            Close();
             
         }
 
@@ -54,6 +64,8 @@ namespace Lab_Workflow_Manager
                 SetFormText();
             }
             var searchTypes = SearchTypeRepository.GetSearchTypes();
+            cboTypeOfWorkSearch.DisplayMember = "Name";
+            cboTypeOfWorkSearch.ValueMember = "Id";
             cboTypeOfWorkSearch.DataSource = searchTypes;
         }
 

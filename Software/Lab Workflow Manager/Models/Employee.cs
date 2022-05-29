@@ -15,10 +15,10 @@ namespace Lab_Workflow_Manager.Models
            return this.Name;
        }
 
-       public void PerformAction(int id)
+       public static void PerformAction(WorkOrder workOrder)
         {
-            var workOrder = WorkOrderRepository.GetWorkOrder(id);
-            if (workOrder == null)
+            var tempWorkOrder = WorkOrderRepository.GetWorkOrder(workOrder.Id);
+            if (tempWorkOrder == null)
             {
                 WorkOrderRepository.InsertWorkOrder(workOrder);
             }

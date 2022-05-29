@@ -57,12 +57,15 @@ namespace Lab_Workflow_Manager
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FrmAddWorkOrder frmAddWorkOrder = new FrmAddWorkOrder();
+            frmAddWorkOrder.ShowDialog();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             WorkOrder workOrder = dgvWorkOrders.CurrentRow.DataBoundItem as WorkOrder;
             WorkOrderRepository.DeleteWorkOrder(workOrder);
+            dgvWorkOrders.Update();
+            dgvWorkOrders.Refresh();
         }
 
         private void txtSearchById_TextChanged(object sender, EventArgs e)

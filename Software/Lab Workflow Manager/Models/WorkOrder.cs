@@ -9,7 +9,7 @@ namespace Lab_Workflow_Manager.Models
 {
     public class WorkOrder
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
         public DateTime Date { get; set; }
 
         public SearchType SearchType { get; set; }
@@ -20,9 +20,9 @@ namespace Lab_Workflow_Manager.Models
 
         public Status Status { get; set; }
 
-        public string InsertCurrentDate()
+        public string GetCurrentDate()
         {
-            return DateTime.Now.ToString("dd.M.yyyy H:m");
+            return DateTime.Now.ToString("dd-M-yyyy H:m");
         }
 
         public void PerformSQL()
