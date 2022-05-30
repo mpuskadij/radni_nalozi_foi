@@ -30,19 +30,33 @@ namespace Lab_Workflow_Manager
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            WorkOrder currentWorkOrder = new WorkOrder();
-            currentWorkOrder.Sample = new Sample();
-            currentWorkOrder.Employee = new Employee();
-            currentWorkOrder.SearchType = new SearchType();
-            currentWorkOrder.Status = new Status();
 
-            currentWorkOrder.Id = int.Parse(txtId.Text);
-            currentWorkOrder.Sample.Id = int.Parse(txtSampleId.Text);
-            currentWorkOrder.SearchType.Id = int.Parse(cboTypeOfWorkSearch.SelectedValue.ToString());
-            currentWorkOrder.Employee.Id = 1;
-            if (currentWorkOrder.Status == null)currentWorkOrder.Status.InsertStatus();
+            if (workOrder != null)
+            {
+                workOrder.Id = int.Parse(txtId.Text);
+                workOrder.Sample.Id = int.Parse(txtSampleId.Text);
+                workOrder.SearchType.Id = int.Parse(cboTypeOfWorkSearch.SelectedValue.ToString());
+                workOrder.Employee.Id = 1;
+            }
 
-            Employee.PerformAction(currentWorkOrder);
+            else
+            {
+                WorkOrder currentWorkOrder = new WorkOrder();
+                currentWorkOrder.Sample = new Sample();
+                currentWorkOrder.Employee = new Employee();
+                currentWorkOrder.SearchType = new SearchType();
+                currentWorkOrder.Status = new Status();
+
+                currentWorkOrder.Id = int.Parse(txtId.Text);
+                currentWorkOrder.Sample.Id = int.Parse(txtSampleId.Text);
+                currentWorkOrder.SearchType.Id = int.Parse(cboTypeOfWorkSearch.SelectedValue.ToString());
+                currentWorkOrder.Employee.Id = 1;
+                currentWorkOrder.Status.InsertStatus();
+                workOrder = currentWorkOrder;
+            }
+
+            Employee.PerformAction(workOrder);
+
 
 
             Close();
