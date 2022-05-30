@@ -55,6 +55,7 @@
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Location = new System.Drawing.Point(39, 415);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(137, 52);
@@ -68,6 +69,7 @@
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.BackColor = System.Drawing.Color.Red;
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.Location = new System.Drawing.Point(613, 415);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(137, 52);
@@ -81,6 +83,7 @@
             this.btnChange.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnChange.BackColor = System.Drawing.Color.Red;
             this.btnChange.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChange.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChange.ForeColor = System.Drawing.Color.Black;
             this.btnChange.Location = new System.Drawing.Point(339, 415);
             this.btnChange.Name = "btnChange";
