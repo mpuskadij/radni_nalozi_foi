@@ -123,6 +123,7 @@
             this.Controls.Add(this.dgvWorkOrders);
             this.Name = "FrmWorkOrders";
             this.Text = "Pregled radnih naloga";
+            this.Activated += new System.EventHandler(this.FrmWorkOrders_Activated);
             this.Load += new System.EventHandler(this.FrmWorkOrders_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkOrders)).EndInit();
             this.ResumeLayout(false);

@@ -64,8 +64,7 @@ namespace Lab_Workflow_Manager
         {
             WorkOrder workOrder = dgvWorkOrders.CurrentRow.DataBoundItem as WorkOrder;
             WorkOrderRepository.DeleteWorkOrder(workOrder);
-            dgvWorkOrders.Update();
-            dgvWorkOrders.Refresh();
+            ShowWorkOrders();
         }
 
         private void txtSearchById_TextChanged(object sender, EventArgs e)
@@ -76,6 +75,9 @@ namespace Lab_Workflow_Manager
             dgvWorkOrders.DataSource = workOrders;
         }
 
-
+        private void FrmWorkOrders_Activated(object sender, EventArgs e)
+        {
+            ShowWorkOrders();
+        }
     }
 }

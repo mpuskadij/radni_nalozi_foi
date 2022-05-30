@@ -57,8 +57,6 @@ namespace Lab_Workflow_Manager
 
             Employee.PerformAction(workOrder);
 
-
-
             Close();
             
         }
