@@ -19,6 +19,5 @@ Zahtjevi funkcionalnosti softverskog rješenja:
 - izvještaj o povijesti pretraga
 
 ## Zadatak
-https://github.com/foivz/pi22-zadace-mpuskadij/blob/master/Korisni%C4%8Dki%20zahtjevi%20ZS%20-%20mikrobiolo%C5%A1ki%20laboratorij.pdf
-
+https://github.com/mpuskadij/radni_nalozi_foi/blob/master/Korisnički%20zahtjevi%20ZS%20-%20mikrobiološki%20laboratorij.pdf
 ## Resursi
