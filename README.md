@@ -2,11 +2,6 @@
 
 ## Podaci o studentu
 
-Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
-------------  | ------------------- | ----- | ---------------------
-Marin Puškadija | mpuskadij20@foi.hr | 0016149444 | mpuskadij
-
-
 ## Opis domene
 
 Zadaća se bavi specifikacijom zahtjeva, dizajniranjem softverskog rješenja i implementacija navedenog softverskog rješenja za mikrobiološki laboratorij. Laboratorij želi pomoćni računalni sustav koji bi digitalizirao trenutni papirnati radni nalog, imao bazu svih radnih naloga, strojevi bi djelomično automatski upisivali rezultate u aktivne radne naloge. 
